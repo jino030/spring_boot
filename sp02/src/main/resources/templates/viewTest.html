@@ -39,5 +39,27 @@
 	</div>
 	<!-- ~{footer(페이지이름, /templates 기준 위치) :: footerFragment(fragment)} -->
 	<div th:replace="~{footer :: footerFragment}"></div>
+	
+	<button id="apibtn">클릭해봐</button>
+	 <script>
+        let btn = document.getElementById("apibtn");
+        btn.addEventListener('click', function (e) {
+            var tmpWindow = window.open('about:blank');
+            tmpWindow.location =
+                "https://testapi.openbanking.or.kr/oauth/2.0/authorize?"
+                +"response_type=code&"
+                +"client_id=50739bb1-ea72-4a7a-8bc2-5f733aebb33c&"
+                +"redirect_uri=http://localhost:8099&"
+                +"scope=login inquiry transfer&"
+                +"state=12345678901234567890123456789012&"
+                +"grant_type=authorization_code"
+
+
+        })
+
+    </script>
+	
+	
+	
 </body>
 </html>

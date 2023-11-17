@@ -18,4 +18,9 @@ public class TestController {
 		model.addAttribute("info", "링크 테스트합니다.");
 		return "selectInfo";
 	}
+	
+	@GetMapping("/editor")
+	public String editorTest() {
+		return "editor";
+	}
 }
